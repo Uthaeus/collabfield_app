@@ -19,5 +19,5 @@ RSpec.feature "Create a new post", :type => :feature do
 
   include_examples 'user creates a new post', 'hobby'
   include_examples 'user creates a new post', 'study'
-  indlude_examples 'user creates a new post', 'team'
+  include_examples 'user creates a new post', 'team'
 end

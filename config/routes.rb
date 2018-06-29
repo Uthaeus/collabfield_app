@@ -6,6 +6,15 @@ Rails.application.routes.draw do
     get 'signup', to: 'devise/registrations#new'
   end
 
+  namespace :private do 
+    resources :conversations, only: [:create] do 
+      member do 
+        post :close
+      end
+    end
+    resources :messages, only: [:index, :create]
+  end
+
   resources :posts do 
     collection do 
       get 'hobby'
