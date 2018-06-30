@@ -30,6 +30,6 @@ class Private::ConversationsController < ApplicationController
     end
 
     def already_added?
-      session[:private_conversations].include?(@conversaion.id)
+      session[:private_conversations].include?(@conversation.id)
     end
 end
