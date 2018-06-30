@@ -3,7 +3,7 @@ FactoryGirl.define do
     association :recipient, factory: :user
     association :sender, factory: :user
 
-    factory :private_conversaion_with_messages do 
+    factory :private_conversation_with_messages do 
       transient do 
         messages_count 1
       end

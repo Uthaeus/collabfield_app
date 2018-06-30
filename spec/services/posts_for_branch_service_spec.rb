@@ -23,7 +23,7 @@ describe PostsForBranchService do
     it 'returns posts filtered by a branch and a search input' do 
       not_included_posts
       category
-      included_posts = [] << post 
+      included_post = [] << post 
       expect(PostsForBranchService.new({branch: 'hobby', search: 'fun'}).call).to (
         eq included_post 
       )
